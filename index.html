@@ -2,5 +2,29 @@
 <head></head>
 <body>
 <div id="result">result</div>
+<script>
+  
+  let a = [5, 3, 4, 1, 2];
+
+for (let i=0; i<a.length; i++) {
+  for (let j=0; j<i; j++) {
+    if (a[i] < a[j]) {
+    	let tmp = a[i];
+      a[i] = a[j];
+      a[j] = tmp;
+    }
+  }
+}
+
+let str = "";
+for (let i=0; i<a.length; i++) {
+  str = str + ", " + a[i];
+}
+str = str.substring(2);
+
+document.getElementById("result").innerHTML = str;
+
+</script>
+
 </body>
 </html>
